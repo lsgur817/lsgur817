@@ -1,6 +1,38 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><script src='https://cdn.jsdelivr.net/npm/chart.js'></script><link rel='stylesheet' href='style.css'></head><body>
-<header><nav><a href='index.html'>홈</a></nav><h1>성장 통계</h1></header>
-<canvas id='c'></canvas>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성장 통계</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header>
+<h1>성장 통계</h1>
+</header>
+
+<canvas id="myChart"></canvas>
+
 <script>
-new Chart(document.getElementById('c'),{type:'line',data:{labels:['월','화','수','목','금','토','일'],datasets:[{label:'공부시간',data:[2,4,3,5,6,7,8]}]}});
-</script></body></html>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx,{
+type:'bar',
+
+data:{
+labels:['월','화','수','목','금','토','일'],
+
+datasets:[{
+label:'공부시간',
+data:[2,4,3,5,6,4,7]
+}]
+}
+});
+</script>
+
+</body>
+</html>
